@@ -17,10 +17,14 @@ class ViewController: UIViewController{
      // Connect a UIImageView to the outlet below
     @IBOutlet weak var swipeImage: UIImageView!
     // Type in the names of your images below
-//    let dict = [4833: "]
      var currentImage = 4833
     @IBOutlet var swipeRight: UISwipeGestureRecognizer!
     @IBOutlet var swipeLeft: UISwipeGestureRecognizer!
+    
+    @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var kindLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var varietyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleImageSwipe(_ sender: UISwipeGestureRecognizer) {
+        let overview = getData(overviews: networkData(), id: String(currentImage))
         switch sender{
         case swipeRight:
             if currentImage == 4832 {
@@ -48,10 +53,42 @@ class ViewController: UIViewController{
         default:
             print("error")
         }
+        brandLabel.text = overview?.brand
+        kindLabel.text = overview?.kind
+        colorLabel.text = overview?.color
+        varietyLabel.text = overview?.variety
     }
     
     @IBAction func submitName(_ sender: UIButton) {
         print("test")
+    }
+    
+    func getData(overviews: [OverviewModel.Overview]?, id: String) -> OverviewModel.Overview? {
+        for overview in overviews! {
+            if overview.id == id {
+                return overview
+            }
+        }
+        return nil
+    }
+    
+    func networkData() -> [OverviewModel.Overview]?{
+        guard let url = URL(string: "https://api.myjson.com/bins/or0ty") else {return nil}
+        var overview: [OverviewModel.Overview]!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            do{
+                // data we are getting from network request
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(OverviewModel.self, from: data!)
+                print(response.overview[0].brand) //Output - EMT
+                overview = response.overview
+             } catch let parsingError {
+                print("Error", parsingError)
+                overview = nil
+           }
+        }
+        task.resume()
+        return overview
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,13 +97,27 @@ class ViewController: UIViewController{
     }
 }
 
-class OverviewModel {
-    var brand = ""
-    var type = ""
-    
-    init(brand: String, type: String){
-        self.brand = brand
-        self.type = type
-    }
-}
+//class OverviewModel{
+//    var brand = ""
+//    var kind = ""
+//    var color = ""
+//    var variety = ""
+//
+//    init(brand: String, kind: String, color: String, variety: String){
+//        self.brand = brand
+//        self.kind = kind
+//        self.color = color
+//        self.variety = variety
+//    }
+//}
 
+struct OverviewModel: Codable{
+    struct Overview: Codable {
+        let id: String
+        let brand: String
+        let kind: String
+        let color: String
+        let variety: String
+    }
+    let overview: [Overview]
+}
