@@ -33,7 +33,6 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleImageSwipe(_ sender: UISwipeGestureRecognizer) {
-        let overview = getData(overviews: networkData(), id: String(currentImage))
         switch sender{
         case swipeRight:
             if currentImage == 4832 {
@@ -53,42 +52,54 @@ class ViewController: UIViewController{
         default:
             print("error")
         }
-        brandLabel.text = overview?.brand
-        kindLabel.text = overview?.kind
-        colorLabel.text = overview?.color
-        varietyLabel.text = overview?.variety
+        self.networkData(id: String(currentImage))
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if sender.identifier == "SelectCars"{
+//
+//        }
+//    }
     
     @IBAction func submitName(_ sender: UIButton) {
         print("test")
     }
     
-    func getData(overviews: [OverviewModel.Overview]?, id: String) -> OverviewModel.Overview? {
+    func getData(overviews: [OverviewModel.Overview]?, id: String) {
+        var temp: OverviewModel.Overview?
         for overview in overviews! {
             if overview.id == id {
-                return overview
+                temp = overview
+                break
+            }else{
+                temp = nil
             }
         }
-        return nil
+        if temp != nil {
+            DispatchQueue.main.async {
+                self.brandLabel.text = temp?.brand
+                self.kindLabel.text = temp?.kind
+                self.colorLabel.text = temp?.color
+                self.varietyLabel.text = "Type: " + temp!.variety
+            }
+        }
     }
     
-    func networkData() -> [OverviewModel.Overview]?{
-        guard let url = URL(string: "https://api.myjson.com/bins/or0ty") else {return nil}
-        var overview: [OverviewModel.Overview]!
+    func networkData(id: String){
+        guard let url = URL(string: "https://api.myjson.com/bins/or0ty") else {return}
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             do{
                 // data we are getting from network request
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(OverviewModel.self, from: data!)
-                print(response.overview[0].brand) //Output - EMT
-                overview = response.overview
+//                print(response.overview[0].id) //Output - EMT
+                self.getData(overviews: response.overview, id: id)
              } catch let parsingError {
                 print("Error", parsingError)
-                overview = nil
            }
         }
         task.resume()
-        return overview
     }
 
     override func didReceiveMemoryWarning() {
