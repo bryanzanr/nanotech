@@ -1,0 +1,343 @@
+{
+    "overview": [
+        {
+            "id": "4832",
+            "brand": "Dodge",
+            "kind": "Challenger",
+            "color": "Yellow",
+            "variety": "Muscle"
+        },
+        {
+            "id": "4833",
+            "brand": "DMC",
+            "kind": "Delorean",
+            "color": "Silver",
+            "variety": "Fastback"
+        },
+        {
+            "id": "4834",
+            "brand": "Ford",
+            "kind": "Mustang",
+            "color": "Saphire",
+            "variety": "Cabriolet"
+        },
+        {
+            "id": "4835",
+            "brand": "Mercedes-Benz",
+            "kind": "AMG GT-S",
+            "color": "Grey",
+            "variety": "Fate & Furious"
+        },
+        {
+            "id": "4836",
+            "brand": "Volkswagon",
+            "kind": "SP2",
+            "color": "Lemon",
+            "variety": "Hatchback"
+        },
+        {
+            "id": "4837",
+            "brand": "BMW",
+            "kind": "E36 M3",
+            "color": "Red",
+            "variety": "Touring"
+        },
+        {
+            "id": "4838",
+            "brand": "Porsche",
+            "kind": "911 GT3 RS",
+            "color": "Violet",
+            "variety": "Exotic"
+        },
+        {
+            "id": "4839",
+            "brand": "Mazda",
+            "kind": "RX7 FD3s",
+            "color": "Blue",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4840",
+            "brand": "Ford",
+            "kind": "Focus RS",
+            "color": "Tron",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4841",
+            "brand": "Alpine",
+            "kind": "A110",
+            "color": "Cyan",
+            "variety": "Sport"
+        },
+        {
+            "id": "4842",
+            "brand": "Nissan",
+            "kind": "300ZX Fairlady",
+            "color": "Orange",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4843",
+            "brand": "Audi",
+            "kind": "RS5",
+            "color": "Fire",
+            "variety": "Sport"
+        },
+        {
+            "id": "4844",
+            "brand": "Nissan",
+            "kind": "GT-R",
+            "color": "Green",
+            "variety": "Exotic"
+        },
+        {
+            "id": "4845",
+            "brand": "Acura",
+            "kind": "NS-X",
+            "color": "White",
+            "variety": "Exotic"
+        },
+        {
+            "id": "4846",
+            "brand": "Lamborghini",
+            "kind": "Huracan",
+            "color": "Space",
+            "variety": "Exotic"
+        },
+        {
+            "id": "4847",
+            "brand": "Nissan",
+            "kind": "180SX S14",
+            "color": "Carbon",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4848",
+            "brand": "Acura",
+            "kind": "Integra",
+            "color": "Broken",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4849",
+            "brand": "Aston Martin",
+            "kind": "One-77",
+            "color": "Sky",
+            "variety": "Sport"
+        },
+        {
+            "id": "4850",
+            "brand": "Nissan",
+            "kind": "Skyline R33",
+            "color": "Nismo",
+            "variety": "Tuner"
+        },
+        {
+            "id": "4851",
+            "brand": "Audi",
+            "kind": "RS6",
+            "color": "Estate",
+            "variety": "Station Wagon"
+        },
+        {
+            "id": "4852",
+            "brand": "Ford",
+            "kind": "GT40",
+            "color": "Gulf",
+            "variety": "Muscle"
+        },
+        {
+            "id": "4853",
+            "brand": "BMW",
+            "kind": "M4 F32",
+            "color": "Astonishing",
+            "variety": "Sport"
+        },
+        {
+            "id": "4854",
+            "brand": "BMW",
+            "kind": "M2 F12",
+            "color": "Active",
+            "variety": "Sport"
+        },
+        {
+            "id": "4855",
+            "brand": "Bentley",
+            "kind": "Continental",
+            "color": "Gran Turismo",
+            "variety": "Exotic"
+        }
+    ],
+    "specification": [
+        {
+            "speed": 10,
+            "acceleration": 20,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 2,
+            "stage_handling": 1
+        },
+        {
+            "speed": 10,
+            "acceleration": 10,
+            "handling": 70,
+            "stage_speed": 1,
+            "stage_acceleration": 1,
+            "stage_handling": 5
+        },
+        {
+            "speed": 90,
+            "acceleration": 10,
+            "handling": 20,
+            "stage_speed": 5,
+            "stage_acceleration": 1,
+            "stage_handling": 1
+        },
+        {
+            "speed": 10,
+            "acceleration": 70,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 5,
+            "stage_handling": 1
+        },
+        {
+            "speed": 90,
+            "acceleration": 10,
+            "handling": 30,
+            "stage_speed": 5,
+            "stage_acceleration": 1,
+            "stage_handling": 3
+        },
+        {
+            "speed": 10,
+            "acceleration": 50,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 1,
+            "stage_handling": 1
+        },
+        {
+            "speed": 10,
+            "acceleration": 10,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 1,
+            "stage_handling": 1
+        },
+        {
+            "speed": 60,
+            "acceleration": 10,
+            "handling": 40,
+            "stage_speed": 5,
+            "stage_acceleration": 1,
+            "stage_handling": 4
+        },
+        {
+            "speed": 10,
+            "acceleration": 10,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 1,
+            "stage_handling": 1
+        },
+        {
+            "speed": 50,
+            "acceleration": 40,
+            "handling": 50,
+            "stage_speed": 5,
+            "stage_acceleration": 4,
+            "stage_handling": 5
+        },
+        {
+            "speed": 10,
+            "acceleration": 10,
+            "handling": 10,
+            "stage_speed": 1,
+            "stage_acceleration": 1,
+            "stage_handling": 1
+        },
+        {
+            "speed": 20,
+            "acceleration": 30,
+            "handling": 10,
+            "stage_speed": 2,
+            "stage_acceleration": 3,
+            "stage_handling": 1
+        },
+        {
+            "speed": 10,
+            "acceleration": 20,
+            "handling": 80,
+            "stage_speed": 1,
+            "stage_acceleration": 2,
+            "stage_handling": 5
+        }
+    ],
+    "rating": [
+        {
+            "star_1": 0,
+            "star_2": 1,
+            "star_3": 4,
+            "star_4": 1,
+            "star_5": 1
+        },
+        {
+            "star_1": 1,
+            "star_2": 0,
+            "star_3": 1,
+            "star_4": 2,
+            "star_5": 1
+        },
+        {
+            "star_1": 1,
+            "star_2": 1,
+            "star_3": 1,
+            "star_4": 1,
+            "star_5": 3
+        },
+        {
+            "star_1": 0,
+            "star_2": 1,
+            "star_3": 1,
+            "star_4": 1,
+            "star_5": 3
+        },
+        {
+            "star_1": 1,
+            "star_2": 1,
+            "star_3": 4,
+            "star_4": 2,
+            "star_5": 1
+        },
+        {
+            "star_1": 1,
+            "star_2": 0,
+            "star_3": 1,
+            "star_4": 1,
+            "star_5": 1
+        },
+        {
+            "star_1": 0,
+            "star_2": 1,
+            "star_3": 4,
+            "star_4": 1,
+            "star_5": 3
+        },
+        {
+            "star_1": 1,
+            "star_2": 1,
+            "star_3": 1,
+            "star_4": 2,
+            "star_5": 1
+        },
+        {
+            "star_1": 0,
+            "star_2": 0,
+            "star_3": 4,
+            "star_4": 1,
+            "star_5": 1
+        }
+    ]
+}

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Questionare.xcodeproj">
+      location = "self:/Users/bryanza/Documents/swift/Questionare/Questionare.xcodeproj">
    </FileRef>
 </Workspace>

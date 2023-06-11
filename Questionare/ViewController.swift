@@ -72,7 +72,7 @@ class ViewController: UIViewController{
         default:
             print("error")
         }
-        self.networkData(id: String(currentImage))
+        self.cacheData(id: String(currentImage))
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -161,6 +161,26 @@ class ViewController: UIViewController{
            }
         }
         task.resume()
+    }
+    
+    func cacheData(id: String) {
+        if let path = Bundle.main.path(forResource: "cold", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(OverviewModel.self, from: data)
+//                print(response.overview[0].id) //Output - EMT
+                self.getOverview(overviews: response.overview, id: id)
+                self.getSpecification(specifications: response.specification)
+                self.getRating(ratings: response.rating)
+//                  let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+//                  if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let person = jsonResult["person"] as? [Any] {
+//                            // do stuff
+//                  }
+              } catch {
+                   // handle error
+              }
+        }
     }
 
     override func didReceiveMemoryWarning() {
